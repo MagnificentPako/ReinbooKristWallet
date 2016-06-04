@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="header">
+    <h1>Reinboo</h1>
+  </div>
+  <div class="block">
+    <div class="content">
+      <%= form_tag("/transaction", method: "put") do %>
+        <%= number_field_tag(:amount, 0, min: 0, max: @balance, placeholder: "Amount") %> </br>
+        <%= text_field_tag(:to, "", placeholder: "To")%> </br>
+        <%= submit_tag("Submit") %>
+      <% end %>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <small>&copy; Copyright 2016, Paul Waslowski</small>
+  </footer>
+</div>

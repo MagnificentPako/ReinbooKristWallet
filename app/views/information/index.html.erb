@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="header">
+    <h1>Reinboo</h1>
+  </div>
+  <div class="block">
+    <div class="content">
+      <p>Enter your password to get some uninteresting information about yourself.</p>
+      <%= form_tag do %>
+        <%= password_field_tag(:password, "", placeholder: "Your password", autofocus: true) %>
+        <input type="submit" style="display:none;">
+      <% end %>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <small>&copy; Copyright 2016, Paul Waslowski</small>
+  </footer>
+</div>

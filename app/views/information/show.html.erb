@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="header">
+    <h1>Reinboo</h1>
+  </div>
+  <div class="block">
+    <div class="content">
+      <p>First seen: <%= @firstseen %></p>
+      <p>Balance: <%= @balance %></p>
+      <p>Total in: <%= @totalin %></p>
+      <p>Total out: <%= @totalout %></p>
+      <p>Total domains: <%= @totaldomains %></p>
+      <p>Domains: <%= @domains %></p>
+      <%= form_tag("/transaction", method: "post") do %>
+        <%= submit_tag "Make a transaction" %>
+      <% end %>
+      <%= form_tag("/logout", method: "post") do %>
+        <%= submit_tag "Logout" %>
+      <% end %>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <small>&copy; Copyright 2016, Paul Waslowski</small>
+  </footer>
+</div>
